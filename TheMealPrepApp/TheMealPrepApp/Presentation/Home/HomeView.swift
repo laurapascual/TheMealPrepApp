@@ -9,7 +9,22 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        Text("Hello, World!")
+        ZStack{
+            Image(decorative: "foodImage").resizable().aspectRatio(contentMode: .fill).ignoresSafeArea()
+            Button {
+            } label: {
+                Text("Start cooking👩🏼‍🍳")
+                    .font(.title3)
+                    .fontWeight(.semibold)
+                    .foregroundStyle(.white)
+                    .padding()
+                    .frame(width: 220, height: 50)
+                    .background(Color(uiColor: UIColor(red: 85/255, green: 102/255, blue: 61/255, alpha: 1)))
+                    .cornerRadius(10.0)
+                    .shadow(radius: 0, x: 10, y: 10)
+            }
+            
+        }
     }
 }
 
