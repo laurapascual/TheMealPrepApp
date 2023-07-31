@@ -16,6 +16,7 @@
 		9343A6952A78450D0021E66D /* TheMealPrepAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9343A6942A78450D0021E66D /* TheMealPrepAppUITestsLaunchTests.swift */; };
 		9343A6A62A7845B40021E66D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9343A6A52A7845B40021E66D /* HomeViewModel.swift */; };
 		9343A6A82A7845BF0021E66D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9343A6A72A7845BF0021E66D /* HomeView.swift */; };
+		9343A6AE2A784C8F0021E66D /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9343A6AD2A784C8F0021E66D /* Meal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		9343A6942A78450D0021E66D /* TheMealPrepAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMealPrepAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9343A6A52A7845B40021E66D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		9343A6A72A7845BF0021E66D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		9343A6AD2A784C8F0021E66D /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		9343A6762A78450C0021E66D /* TheMealPrepApp */ = {
 			isa = PBXGroup;
 			children = (
+				9343A6AC2A784C7A0021E66D /* Domain */,
 				9343A6A12A7845540021E66D /* Presentation */,
 				9343A6772A78450C0021E66D /* TheMealPrepAppApp.swift */,
 				9343A6792A78450C0021E66D /* ContentView.swift */,
@@ -147,6 +150,22 @@
 				9343A6A72A7845BF0021E66D /* HomeView.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		9343A6AB2A784C6F0021E66D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9343A6AD2A784C8F0021E66D /* Meal.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9343A6AC2A784C7A0021E66D /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				9343A6AB2A784C6F0021E66D /* Models */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9343A6AE2A784C8F0021E66D /* Meal.swift in Sources */,
 				9343A67A2A78450C0021E66D /* ContentView.swift in Sources */,
 				9343A6A82A7845BF0021E66D /* HomeView.swift in Sources */,
 				9343A6A62A7845B40021E66D /* HomeViewModel.swift in Sources */,
