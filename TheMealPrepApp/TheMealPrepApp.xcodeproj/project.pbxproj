@@ -100,6 +100,7 @@
 		9343A6762A78450C0021E66D /* TheMealPrepApp */ = {
 			isa = PBXGroup;
 			children = (
+				9343A6AF2A784D300021E66D /* Data */,
 				9343A6AC2A784C7A0021E66D /* Domain */,
 				9343A6A12A7845540021E66D /* Presentation */,
 				9343A6772A78450C0021E66D /* TheMealPrepAppApp.swift */,
@@ -166,6 +167,29 @@
 				9343A6AB2A784C6F0021E66D /* Models */,
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		9343A6AF2A784D300021E66D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				9343A6B12A784D3E0021E66D /* Utils */,
+				9343A6B02A784D350021E66D /* Remote */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		9343A6B02A784D350021E66D /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		9343A6B12A784D3E0021E66D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

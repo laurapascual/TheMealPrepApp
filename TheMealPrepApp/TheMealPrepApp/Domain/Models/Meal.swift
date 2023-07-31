@@ -8,7 +8,8 @@
 import Foundation
 
 struct Meal {
-    let name: String
-    let instructions: String
-    let video: URL
+    let image: URL // strMealThumb
+    let name: String // strMeal
+    let area: String // strArea
+    let tags: String // strTags
 }
