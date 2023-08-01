@@ -6,50 +6,19 @@
 //
 
 import Foundation
-import Combine
-
-enum NetworkError: Error {
-    case malFormedURL
-    case noData
-    case errorCode(Int?)
-    case decoding
-    case other
-}
 
 final class RemoteDataSourceImpl: RemoteDataSourceProtocol {
     
-    private let session: URLSession = URLSession.shared
-    private let server: String = "https://www.themealdb.com/api/json/v1/1/"
+    private let server: String = "https://www.themealdb.com/api/json/v1/1/search.php?f=a"
     
     func getMeals() async throws -> [Meal]? {
+        let url = URL(string: server)!
+        let (data, _) = try await URLSession.shared.data(from: url)
         
-        guard let url = getSessionMeals() else {
-            throw NetworkError.malFormedURL
-        }
+        print(data)
         
-        let (data, _) = try await URLSession.shared.data(for: url)
-        
-        let meals = try JSONDecoder().decode([Meal].self, from: data)
-        meals.forEach { meal in
-            print(meal.name)
-        }
-        return meals
+        let mealsResponse = try JSONDecoder().decode(MealsResponse.self, from: data)
+        print(mealsResponse)
+        return mealsResponse.meals
     }
-    
-    
-    func getSessionMeals() -> URLRequest? {
-        
-        guard let url = URL(string: "\(server)/meals/all") else {
-            print("Error: invalid URL")
-            return nil
-        }
-        
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        return request
-    }
-    
-    
-    
 }
-

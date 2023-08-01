@@ -27,6 +27,12 @@ final class RootViewModel: ObservableObject {
         }
     
     func onClick() {
-        print("hola")
+            Task {
+                guard let mealsFromApi = try? await repository.getMeals() else {
+                    print("Unable to get meals from api")
+                    return
+                }
+                print(mealsFromApi)
+            }
     }
 }

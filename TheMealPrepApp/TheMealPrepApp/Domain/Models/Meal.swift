@@ -8,8 +8,10 @@
 import Foundation
 
 struct Meal : Decodable {
-    let image: URL // strMealThumb
-    let name: String // strMeal
-    let area: String // strArea
-    let tags: String // strTags
+    let idMeal: String
+    let strMealThumb: String
+    let strMeal: String
+    let strArea: String
+    let strTags: String?
+    let strYoutube: String
 }
