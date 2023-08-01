@@ -13,9 +13,11 @@
 		9343A6892A78450D0021E66D /* TheMealPrepAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9343A6882A78450D0021E66D /* TheMealPrepAppTests.swift */; };
 		9343A6932A78450D0021E66D /* TheMealPrepAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9343A6922A78450D0021E66D /* TheMealPrepAppUITests.swift */; };
 		9343A6952A78450D0021E66D /* TheMealPrepAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9343A6942A78450D0021E66D /* TheMealPrepAppUITestsLaunchTests.swift */; };
-		9343A6A62A7845B40021E66D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9343A6A52A7845B40021E66D /* HomeViewModel.swift */; };
 		9343A6A82A7845BF0021E66D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9343A6A72A7845BF0021E66D /* HomeView.swift */; };
 		9343A6AE2A784C8F0021E66D /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9343A6AD2A784C8F0021E66D /* Meal.swift */; };
+		9343A6C22A794A5E0021E66D /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9343A6C12A794A5E0021E66D /* RootViewModel.swift */; };
+		9343A6C42A794AE80021E66D /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9343A6C32A794AE80021E66D /* RootView.swift */; };
+		9343A6C62A794C090021E66D /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9343A6C52A794C090021E66D /* ListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,9 +47,11 @@
 		9343A68E2A78450D0021E66D /* TheMealPrepAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheMealPrepAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9343A6922A78450D0021E66D /* TheMealPrepAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMealPrepAppUITests.swift; sourceTree = "<group>"; };
 		9343A6942A78450D0021E66D /* TheMealPrepAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMealPrepAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		9343A6A52A7845B40021E66D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		9343A6A72A7845BF0021E66D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		9343A6AD2A784C8F0021E66D /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		9343A6C12A794A5E0021E66D /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		9343A6C32A794AE80021E66D /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		9343A6C52A794C090021E66D /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +105,6 @@
 				9343A6BB2A79455F0021E66D /* App */,
 				9343A6AF2A784D300021E66D /* Data */,
 				9343A6AC2A784C7A0021E66D /* Domain */,
-				9343A6BC2A7945880021E66D /* Root */,
 				9343A6A12A7845540021E66D /* Presentation */,
 			);
 			path = TheMealPrepApp;
@@ -135,6 +138,7 @@
 		9343A6A12A7845540021E66D /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				9343A6BC2A7945880021E66D /* Root */,
 				9343A6C02A7946500021E66D /* Detail */,
 				9343A6BF2A7946490021E66D /* List */,
 				9343A6A22A7845610021E66D /* Home */,
@@ -145,7 +149,6 @@
 		9343A6A22A7845610021E66D /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				9343A6A52A7845B40021E66D /* HomeViewModel.swift */,
 				9343A6A72A7845BF0021E66D /* HomeView.swift */,
 			);
 			path = Home;
@@ -197,6 +200,8 @@
 		9343A6BC2A7945880021E66D /* Root */ = {
 			isa = PBXGroup;
 			children = (
+				9343A6C12A794A5E0021E66D /* RootViewModel.swift */,
+				9343A6C32A794AE80021E66D /* RootView.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -218,6 +223,7 @@
 		9343A6BF2A7946490021E66D /* List */ = {
 			isa = PBXGroup;
 			children = (
+				9343A6C52A794C090021E66D /* ListView.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -359,9 +365,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9343A6C22A794A5E0021E66D /* RootViewModel.swift in Sources */,
 				9343A6AE2A784C8F0021E66D /* Meal.swift in Sources */,
+				9343A6C62A794C090021E66D /* ListView.swift in Sources */,
+				9343A6C42A794AE80021E66D /* RootView.swift in Sources */,
 				9343A6A82A7845BF0021E66D /* HomeView.swift in Sources */,
-				9343A6A62A7845B40021E66D /* HomeViewModel.swift in Sources */,
 				9343A6782A78450C0021E66D /* TheMealPrepAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,7 +528,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"TheMealPrepApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"TheMealPrepApp/App/Preview Content\"";
 				DEVELOPMENT_TEAM = THCAP933JL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -549,7 +557,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"TheMealPrepApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"TheMealPrepApp/App/Preview Content\"";
 				DEVELOPMENT_TEAM = THCAP933JL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
