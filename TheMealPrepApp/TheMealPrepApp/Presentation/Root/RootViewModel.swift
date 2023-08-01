@@ -22,11 +22,13 @@ final class RootViewModel: ObservableObject {
     @Published var status = Status.none
     private var subscribers = Set<AnyCancellable>()
     
-    init(repository: RepositoryProtocol) {
-            self.repository = repository
+    init(repository: RepositoryProtocol, status: Status = Status.none) {
+        self.repository = repository
+        self.status = status
         }
     
     func onClick() {
+        status = .loading
             Task {
                 guard let mealsFromApi = try? await repository.getMeals() else {
                     print("Unable to get meals from api")
@@ -34,5 +36,6 @@ final class RootViewModel: ObservableObject {
                 }
                 print(mealsFromApi)
             }
+        status = .loaded
     }
 }
