@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9343A6782A78450C0021E66D /* TheMealPrepAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9343A6772A78450C0021E66D /* TheMealPrepAppApp.swift */; };
-		9343A67A2A78450C0021E66D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9343A6792A78450C0021E66D /* ContentView.swift */; };
 		9343A67C2A78450C0021E66D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9343A67B2A78450C0021E66D /* Assets.xcassets */; };
 		9343A67F2A78450C0021E66D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9343A67E2A78450C0021E66D /* Preview Assets.xcassets */; };
 		9343A6892A78450D0021E66D /* TheMealPrepAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9343A6882A78450D0021E66D /* TheMealPrepAppTests.swift */; };
@@ -39,7 +38,6 @@
 /* Begin PBXFileReference section */
 		9343A6742A78450C0021E66D /* TheMealPrepApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheMealPrepApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9343A6772A78450C0021E66D /* TheMealPrepAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMealPrepAppApp.swift; sourceTree = "<group>"; };
-		9343A6792A78450C0021E66D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9343A67B2A78450C0021E66D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9343A67E2A78450C0021E66D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9343A6842A78450D0021E66D /* TheMealPrepAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheMealPrepAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,13 +98,11 @@
 		9343A6762A78450C0021E66D /* TheMealPrepApp */ = {
 			isa = PBXGroup;
 			children = (
+				9343A6BB2A79455F0021E66D /* App */,
 				9343A6AF2A784D300021E66D /* Data */,
 				9343A6AC2A784C7A0021E66D /* Domain */,
+				9343A6BC2A7945880021E66D /* Root */,
 				9343A6A12A7845540021E66D /* Presentation */,
-				9343A6772A78450C0021E66D /* TheMealPrepAppApp.swift */,
-				9343A6792A78450C0021E66D /* ContentView.swift */,
-				9343A67B2A78450C0021E66D /* Assets.xcassets */,
-				9343A67D2A78450C0021E66D /* Preview Content */,
 			);
 			path = TheMealPrepApp;
 			sourceTree = "<group>";
@@ -139,6 +135,8 @@
 		9343A6A12A7845540021E66D /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				9343A6C02A7946500021E66D /* Detail */,
+				9343A6BF2A7946490021E66D /* List */,
 				9343A6A22A7845610021E66D /* Home */,
 			);
 			path = Presentation;
@@ -164,6 +162,7 @@
 		9343A6AC2A784C7A0021E66D /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				9343A6BD2A7945B40021E66D /* Protocols */,
 				9343A6AB2A784C6F0021E66D /* Models */,
 			);
 			path = Domain;
@@ -172,7 +171,7 @@
 		9343A6AF2A784D300021E66D /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				9343A6B12A784D3E0021E66D /* Utils */,
+				9343A6BE2A7946280021E66D /* Repository */,
 				9343A6B02A784D350021E66D /* Remote */,
 			);
 			path = Data;
@@ -185,11 +184,49 @@
 			path = Remote;
 			sourceTree = "<group>";
 		};
-		9343A6B12A784D3E0021E66D /* Utils */ = {
+		9343A6BB2A79455F0021E66D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				9343A6772A78450C0021E66D /* TheMealPrepAppApp.swift */,
+				9343A67B2A78450C0021E66D /* Assets.xcassets */,
+				9343A67D2A78450C0021E66D /* Preview Content */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		9343A6BC2A7945880021E66D /* Root */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Utils;
+			path = Root;
+			sourceTree = "<group>";
+		};
+		9343A6BD2A7945B40021E66D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9343A6BE2A7946280021E66D /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		9343A6BF2A7946490021E66D /* List */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		9343A6C02A7946500021E66D /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,7 +360,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9343A6AE2A784C8F0021E66D /* Meal.swift in Sources */,
-				9343A67A2A78450C0021E66D /* ContentView.swift in Sources */,
 				9343A6A82A7845BF0021E66D /* HomeView.swift in Sources */,
 				9343A6A62A7845B40021E66D /* HomeViewModel.swift in Sources */,
 				9343A6782A78450C0021E66D /* TheMealPrepAppApp.swift in Sources */,
