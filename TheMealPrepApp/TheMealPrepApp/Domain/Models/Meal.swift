@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Meal {
+struct Meal : Decodable {
     let image: URL // strMealThumb
     let name: String // strMeal
     let area: String // strArea

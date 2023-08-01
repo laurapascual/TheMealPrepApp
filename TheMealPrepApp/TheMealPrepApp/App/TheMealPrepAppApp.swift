@@ -11,7 +11,10 @@ import SwiftUI
 struct TheMealPrepAppApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            let remoteDataSource = RemoteDataSourceImpl()
+            let repository = RepositoryImpl(remoteDataSource: remoteDataSource)
+            RootView()
+                .environmentObject(RootViewModel(repository: repository))
         }
     }
 }

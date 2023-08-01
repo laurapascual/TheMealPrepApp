@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct HomeView: View {
+    @EnvironmentObject var rootViewModel: RootViewModel
+    
     var body: some View {
         ZStack{
             Image(decorative: "foodImage").resizable().aspectRatio(contentMode: .fill).ignoresSafeArea()
             Button {
+                rootViewModel.onClick()
             } label: {
                 Text("Start cooking👩🏼‍🍳")
                     .font(.title3)
@@ -30,6 +33,9 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
+        let remoteDataSource = RemoteDataSourceImpl()
+                let repository = RepositoryImpl(remoteDataSource: remoteDataSource)
         HomeView()
+            .environmentObject(RootViewModel(repository: repository))
     }
 }

@@ -18,7 +18,15 @@ enum Status {
 
 final class RootViewModel: ObservableObject {
     
+    let repository: RepositoryProtocol
     @Published var status = Status.none
     private var subscribers = Set<AnyCancellable>()
-      
+    
+    init(repository: RepositoryProtocol) {
+            self.repository = repository
+        }
+    
+    func onClick() {
+        print("hola")
+    }
 }

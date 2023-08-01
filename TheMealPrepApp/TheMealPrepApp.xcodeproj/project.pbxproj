@@ -18,6 +18,10 @@
 		9343A6C22A794A5E0021E66D /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9343A6C12A794A5E0021E66D /* RootViewModel.swift */; };
 		9343A6C42A794AE80021E66D /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9343A6C32A794AE80021E66D /* RootView.swift */; };
 		9343A6C62A794C090021E66D /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9343A6C52A794C090021E66D /* ListView.swift */; };
+		9343A6C82A794CF20021E66D /* RemoteDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9343A6C72A794CF20021E66D /* RemoteDataSourceProtocol.swift */; };
+		9343A6CA2A794CFB0021E66D /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9343A6C92A794CFB0021E66D /* RepositoryProtocol.swift */; };
+		9343A6CC2A794F580021E66D /* RemoteDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9343A6CB2A794F580021E66D /* RemoteDataSourceImpl.swift */; };
+		9343A6CE2A7958920021E66D /* RepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9343A6CD2A7958920021E66D /* RepositoryImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +56,10 @@
 		9343A6C12A794A5E0021E66D /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		9343A6C32A794AE80021E66D /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		9343A6C52A794C090021E66D /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		9343A6C72A794CF20021E66D /* RemoteDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSourceProtocol.swift; sourceTree = "<group>"; };
+		9343A6C92A794CFB0021E66D /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
+		9343A6CB2A794F580021E66D /* RemoteDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSourceImpl.swift; sourceTree = "<group>"; };
+		9343A6CD2A7958920021E66D /* RepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +191,7 @@
 		9343A6B02A784D350021E66D /* Remote */ = {
 			isa = PBXGroup;
 			children = (
+				9343A6CB2A794F580021E66D /* RemoteDataSourceImpl.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -209,6 +218,8 @@
 		9343A6BD2A7945B40021E66D /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				9343A6C72A794CF20021E66D /* RemoteDataSourceProtocol.swift */,
+				9343A6C92A794CFB0021E66D /* RepositoryProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -216,6 +227,7 @@
 		9343A6BE2A7946280021E66D /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				9343A6CD2A7958920021E66D /* RepositoryImpl.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -367,10 +379,14 @@
 			files = (
 				9343A6C22A794A5E0021E66D /* RootViewModel.swift in Sources */,
 				9343A6AE2A784C8F0021E66D /* Meal.swift in Sources */,
+				9343A6C82A794CF20021E66D /* RemoteDataSourceProtocol.swift in Sources */,
 				9343A6C62A794C090021E66D /* ListView.swift in Sources */,
 				9343A6C42A794AE80021E66D /* RootView.swift in Sources */,
+				9343A6CA2A794CFB0021E66D /* RepositoryProtocol.swift in Sources */,
 				9343A6A82A7845BF0021E66D /* HomeView.swift in Sources */,
 				9343A6782A78450C0021E66D /* TheMealPrepAppApp.swift in Sources */,
+				9343A6CC2A794F580021E66D /* RemoteDataSourceImpl.swift in Sources */,
+				9343A6CE2A7958920021E66D /* RepositoryImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
