@@ -10,7 +10,21 @@ import Foundation
 final class ListViewModel: ObservableObject {
     
     private let repository: RepositoryProtocol
-        @Published var meals: [Meal] = []
+    @Published var filterOption: AreaEnum = .none
+    @Published var searchText = ""
+    @Published var meals: [Meal] = []
+    
+    var filteredMeals: [Meal] {
+        let meals = self.meals
+        guard !filterOption.rawValue.isEmpty else {return meals}
+        return meals.filter{$0.area.contains(filterOption.rawValue)}
+    }
+    
+    var searchedMeals: [Meal] {
+        let meals = filteredMeals
+        guard !searchText.isEmpty else {return meals}
+        return meals.filter{$0.name.lowercased().contains(searchText.lowercased())}
+    }
         
         init(repository: RepositoryProtocol) {
             self.repository = repository

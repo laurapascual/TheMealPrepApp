@@ -18,9 +18,14 @@ struct ListView: View {
     
     var body: some View {
         NavigationView {
-            Form {
                 List {
-                    ForEach(listViewModel.meals) { meal in
+                    Picker("Filter by area", selection: $listViewModel.filterOption) {
+                        ForEach(AreaEnum.allCases, id: \.self){
+                            area in
+                            Text(area.rawValue)
+                        }
+                    }
+                    ForEach(listViewModel.searchedMeals) { meal in
                         NavigationLink {
                             MealDetailView(meal: meal)
                         } label: {
@@ -31,7 +36,7 @@ struct ListView: View {
                             .stroke(style: StrokeStyle(lineWidth: 1, dash: [15.0])))
                 }
             }.scrollContentBackground(.hidden)
-        }
+            .searchable(text: $listViewModel.searchText)
     }
     struct ListView_Previews: PreviewProvider {
         static var previews: some View {

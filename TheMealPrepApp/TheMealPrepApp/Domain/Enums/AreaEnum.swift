@@ -7,7 +7,8 @@
 
 import Foundation
 
-enum AreaEnum: String {
+enum AreaEnum: String, CaseIterable, Hashable {
+    case none = ""
     case american = "American"
     case british = "British"
     case canadian = "Canadian"
