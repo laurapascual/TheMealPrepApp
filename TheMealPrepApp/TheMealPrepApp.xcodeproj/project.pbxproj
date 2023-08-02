@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		933A722D2A7A9F56003079DC /* YouTubeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933A722C2A7A9F56003079DC /* YouTubeView.swift */; };
+		933A72302A7AA269003079DC /* AreaEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933A722F2A7AA269003079DC /* AreaEnum.swift */; };
 		9343A6782A78450C0021E66D /* TheMealPrepAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9343A6772A78450C0021E66D /* TheMealPrepAppApp.swift */; };
 		9343A67C2A78450C0021E66D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9343A67B2A78450C0021E66D /* Assets.xcassets */; };
 		9343A67F2A78450C0021E66D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9343A67E2A78450C0021E66D /* Preview Assets.xcassets */; };
@@ -46,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		933A722C2A7A9F56003079DC /* YouTubeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeView.swift; sourceTree = "<group>"; };
+		933A722F2A7AA269003079DC /* AreaEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaEnum.swift; sourceTree = "<group>"; };
 		9343A6742A78450C0021E66D /* TheMealPrepApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheMealPrepApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9343A6772A78450C0021E66D /* TheMealPrepAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMealPrepAppApp.swift; sourceTree = "<group>"; };
 		9343A67B2A78450C0021E66D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -95,6 +99,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		933A722B2A7A9F41003079DC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				933A722C2A7A9F56003079DC /* YouTubeView.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		933A722E2A7AA259003079DC /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				933A722F2A7AA269003079DC /* AreaEnum.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		9343A66B2A78450B0021E66D = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +174,7 @@
 		9343A6A12A7845540021E66D /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				933A722B2A7A9F41003079DC /* Utils */,
 				9343A6BC2A7945880021E66D /* Root */,
 				9343A6C02A7946500021E66D /* Detail */,
 				9343A6BF2A7946490021E66D /* List */,
@@ -182,6 +203,7 @@
 		9343A6AC2A784C7A0021E66D /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				933A722E2A7AA259003079DC /* Enums */,
 				9343A6BD2A7945B40021E66D /* Protocols */,
 				9343A6AB2A784C6F0021E66D /* Models */,
 			);
@@ -404,10 +426,12 @@
 				9343A6DB2A7A4C1A0021E66D /* MealDetailView.swift in Sources */,
 				9343A6C62A794C090021E66D /* ListView.swift in Sources */,
 				9343A6C42A794AE80021E66D /* RootView.swift in Sources */,
+				933A72302A7AA269003079DC /* AreaEnum.swift in Sources */,
 				9343A6CA2A794CFB0021E66D /* RepositoryProtocol.swift in Sources */,
 				9343A6A82A7845BF0021E66D /* HomeView.swift in Sources */,
 				9343A6D02A79A0300021E66D /* MealsResponse.swift in Sources */,
 				9343A6D92A7A3ABB0021E66D /* ListViewModel.swift in Sources */,
+				933A722D2A7A9F56003079DC /* YouTubeView.swift in Sources */,
 				9343A6782A78450C0021E66D /* TheMealPrepAppApp.swift in Sources */,
 				9343A6CC2A794F580021E66D /* RemoteDataSourceImpl.swift in Sources */,
 				9343A6CE2A7958920021E66D /* RepositoryImpl.swift in Sources */,
