@@ -23,7 +23,7 @@ final class ListViewModel: ObservableObject {
     var searchedMeals: [Meal] {
         let meals = filteredMeals
         guard !searchText.isEmpty else {return meals}
-        return meals.filter{$0.name.lowercased().contains(searchText.lowercased())}
+        return meals.filter{$0.name.lowercased().starts(with:searchText.lowercased())}
     }
         
         init(repository: RepositoryProtocol) {
