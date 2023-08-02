@@ -16,7 +16,7 @@ struct RootView: View {
     var body: some View {
         switch (rootViewModel.status) {
             
-        case Status.none:
+        case Status.`default`:
             HomeView()
         
         case Status.loading:

@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 enum Status {
-    case none
+    case `default`
     case loading
     case loaded
     case error(error: String)
@@ -19,10 +19,10 @@ enum Status {
 final class RootViewModel: ObservableObject {
     
     let repository: RepositoryProtocol
-    @Published var status = Status.none
+    @Published var status = Status.default
     private var subscribers = Set<AnyCancellable>()
     
-    init(repository: RepositoryProtocol, status: Status = Status.none) {
+    init(repository: RepositoryProtocol, status: Status = Status.default) {
         self.repository = repository
         self.status = status
         }
@@ -30,5 +30,9 @@ final class RootViewModel: ObservableObject {
     func onClick() {
         status = .loading
         status = .loaded
+    }
+    
+    func goToHome() {
+        status = .default
     }
 }

@@ -19,10 +19,10 @@ struct HomeView: View {
                 Text("Start cooking👩🏼‍🍳")
                     .font(.title3)
                     .fontWeight(.semibold)
-                    .foregroundStyle(.white)
+                    .foregroundStyle(.black)
                     .padding()
                     .frame(width: 220, height: 50)
-                    .background(Color(uiColor: UIColor(red: 87/255, green: 15/255, blue: 15/255, alpha: 1)))
+                    .background(Color(uiColor: UIColor(red: 255/255, green: 171/255, blue: 61/255, alpha: 1)))
                     .cornerRadius(10.0)
                     .shadow(radius: 0, x: 10, y: 10)
             }
