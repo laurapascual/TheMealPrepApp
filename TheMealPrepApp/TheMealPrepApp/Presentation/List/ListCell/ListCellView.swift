@@ -15,13 +15,14 @@ struct ListCellView: View {
     }
     
     var body: some View {
-        VStack(alignment: .leading, content: {
-            HStack(content: {
+        VStack(alignment: .center, content: {
+            
                         AsyncImage(url: meal.image,
                                    content: { image in
                                        image.resizable()
-                                .aspectRatio(contentMode: .fill)
-                                            .frame(width: 130, height: 70)
+                                    .cornerRadius(10)
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: 300, height: 300)
                                    },
                                    placeholder: {
                                        ProgressView()
@@ -30,22 +31,18 @@ struct ListCellView: View {
                         VStack (alignment: .center, content: {
                             Text(meal.name)
                                 .fontWeight(.semibold)
-                                .font(.system(size: 14))
-                            
-                            Spacer()
+                                .font(.system(size: 18))
+                                .multilineTextAlignment(.center)
                             
                             Text(meal.area)
                                 .font(.system(size: 12))
                                 .frame(maxWidth: .infinity, alignment: .center)
                             
-                            Spacer()
-                            
                             Text(meal.tags ?? "No tags")
                                 .font(.system(size: 12))
                                 .frame(maxWidth: .infinity, alignment: .center)
                         })
-                })
-        }).padding(EdgeInsets(top: 40, leading: 0, bottom: 40, trailing: 0))
+                }).padding(EdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 0))
                 
     }
 }

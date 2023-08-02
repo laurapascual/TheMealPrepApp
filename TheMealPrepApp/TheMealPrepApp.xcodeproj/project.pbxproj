@@ -25,6 +25,7 @@
 		9343A6D02A79A0300021E66D /* MealsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9343A6CF2A79A0300021E66D /* MealsResponse.swift */; };
 		9343A6D52A7A39F80021E66D /* ListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9343A6D42A7A39F80021E66D /* ListCellView.swift */; };
 		9343A6D92A7A3ABB0021E66D /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9343A6D82A7A3ABB0021E66D /* ListViewModel.swift */; };
+		9343A6DB2A7A4C1A0021E66D /* MealDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9343A6DA2A7A4C1A0021E66D /* MealDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,8 +65,9 @@
 		9343A6CB2A794F580021E66D /* RemoteDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSourceImpl.swift; sourceTree = "<group>"; };
 		9343A6CD2A7958920021E66D /* RepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryImpl.swift; sourceTree = "<group>"; };
 		9343A6CF2A79A0300021E66D /* MealsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsResponse.swift; sourceTree = "<group>"; };
-		9343A6D42A7A39F80021E66D /* ListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCellView.swift; sourceTree = "<group>"; };
+		9343A6D42A7A39F80021E66D /* ListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCellView.swift; sourceTree = "<group>"; usesTabs = 0; };
 		9343A6D82A7A3ABB0021E66D /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		9343A6DA2A7A4C1A0021E66D /* MealDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +254,7 @@
 		9343A6C02A7946500021E66D /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				9343A6DA2A7A4C1A0021E66D /* MealDetailView.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				9343A6AE2A784C8F0021E66D /* Meal.swift in Sources */,
 				9343A6C82A794CF20021E66D /* RemoteDataSourceProtocol.swift in Sources */,
 				9343A6D52A7A39F80021E66D /* ListCellView.swift in Sources */,
+				9343A6DB2A7A4C1A0021E66D /* MealDetailView.swift in Sources */,
 				9343A6C62A794C090021E66D /* ListView.swift in Sources */,
 				9343A6C42A794AE80021E66D /* RootView.swift in Sources */,
 				9343A6CA2A794CFB0021E66D /* RepositoryProtocol.swift in Sources */,
