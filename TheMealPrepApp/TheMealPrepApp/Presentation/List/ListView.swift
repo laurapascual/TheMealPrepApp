@@ -8,13 +8,25 @@
 import SwiftUI
 
 struct ListView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    
+    @EnvironmentObject var rootViewModel: RootViewModel
+    @ObservedObject var listViewModel: ListViewModel
+    
+    init(listViewModel: ListViewModel) {
+        self.listViewModel = listViewModel
     }
-}
-
-struct ListView_Previews: PreviewProvider {
-    static var previews: some View {
-        ListView()
+    
+    var body: some View {
+         List {
+            ForEach(listViewModel.meals) { meal in
+                ListCellView(meal: meal)
+            }
+        }
+    }
+    
+    struct ListView_Previews: PreviewProvider {
+        static var previews: some View {
+            ListView(listViewModel: ListViewModel(repository: RepositoryImpl(remoteDataSource: RemoteDataSourceImpl())))
+        }
     }
 }

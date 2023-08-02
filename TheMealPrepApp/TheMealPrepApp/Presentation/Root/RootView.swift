@@ -26,7 +26,8 @@ struct RootView: View {
             Text("Error \(errorString)")
             
         case Status.loaded:
-            ListView()
+            let listViewModel = ListViewModel(repository: rootViewModel.repository)
+                ListView(listViewModel: listViewModel)
         }
     }
 }

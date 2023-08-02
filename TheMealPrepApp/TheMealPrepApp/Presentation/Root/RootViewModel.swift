@@ -34,7 +34,6 @@ final class RootViewModel: ObservableObject {
                     print("Unable to get meals from api")
                     return
                 }
-                print(mealsFromApi)
             }
         status = .loaded
     }

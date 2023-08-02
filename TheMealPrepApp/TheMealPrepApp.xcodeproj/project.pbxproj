@@ -23,6 +23,8 @@
 		9343A6CC2A794F580021E66D /* RemoteDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9343A6CB2A794F580021E66D /* RemoteDataSourceImpl.swift */; };
 		9343A6CE2A7958920021E66D /* RepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9343A6CD2A7958920021E66D /* RepositoryImpl.swift */; };
 		9343A6D02A79A0300021E66D /* MealsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9343A6CF2A79A0300021E66D /* MealsResponse.swift */; };
+		9343A6D52A7A39F80021E66D /* ListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9343A6D42A7A39F80021E66D /* ListCellView.swift */; };
+		9343A6D92A7A3ABB0021E66D /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9343A6D82A7A3ABB0021E66D /* ListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,12 +58,14 @@
 		9343A6AD2A784C8F0021E66D /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		9343A6C12A794A5E0021E66D /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		9343A6C32A794AE80021E66D /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
-		9343A6C52A794C090021E66D /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		9343A6C52A794C090021E66D /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; wrapsLines = 1; };
 		9343A6C72A794CF20021E66D /* RemoteDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSourceProtocol.swift; sourceTree = "<group>"; };
 		9343A6C92A794CFB0021E66D /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
 		9343A6CB2A794F580021E66D /* RemoteDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSourceImpl.swift; sourceTree = "<group>"; };
 		9343A6CD2A7958920021E66D /* RepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryImpl.swift; sourceTree = "<group>"; };
 		9343A6CF2A79A0300021E66D /* MealsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsResponse.swift; sourceTree = "<group>"; };
+		9343A6D42A7A39F80021E66D /* ListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCellView.swift; sourceTree = "<group>"; };
+		9343A6D82A7A3ABB0021E66D /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,7 +242,9 @@
 		9343A6BF2A7946490021E66D /* List */ = {
 			isa = PBXGroup;
 			children = (
+				9343A6D32A7A39E40021E66D /* ListCell */,
 				9343A6C52A794C090021E66D /* ListView.swift */,
+				9343A6D82A7A3ABB0021E66D /* ListViewModel.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -248,6 +254,14 @@
 			children = (
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		9343A6D32A7A39E40021E66D /* ListCell */ = {
+			isa = PBXGroup;
+			children = (
+				9343A6D42A7A39F80021E66D /* ListCellView.swift */,
+			);
+			path = ListCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -383,11 +397,13 @@
 				9343A6C22A794A5E0021E66D /* RootViewModel.swift in Sources */,
 				9343A6AE2A784C8F0021E66D /* Meal.swift in Sources */,
 				9343A6C82A794CF20021E66D /* RemoteDataSourceProtocol.swift in Sources */,
+				9343A6D52A7A39F80021E66D /* ListCellView.swift in Sources */,
 				9343A6C62A794C090021E66D /* ListView.swift in Sources */,
 				9343A6C42A794AE80021E66D /* RootView.swift in Sources */,
 				9343A6CA2A794CFB0021E66D /* RepositoryProtocol.swift in Sources */,
 				9343A6A82A7845BF0021E66D /* HomeView.swift in Sources */,
 				9343A6D02A79A0300021E66D /* MealsResponse.swift in Sources */,
+				9343A6D92A7A3ABB0021E66D /* ListViewModel.swift in Sources */,
 				9343A6782A78450C0021E66D /* TheMealPrepAppApp.swift in Sources */,
 				9343A6CC2A794F580021E66D /* RemoteDataSourceImpl.swift in Sources */,
 				9343A6CE2A7958920021E66D /* RepositoryImpl.swift in Sources */,
