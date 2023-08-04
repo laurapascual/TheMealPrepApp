@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		933A722D2A7A9F56003079DC /* YouTubeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933A722C2A7A9F56003079DC /* YouTubeView.swift */; };
 		933A72302A7AA269003079DC /* AreaEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933A722F2A7AA269003079DC /* AreaEnum.swift */; };
+		933A72342A7BC3DB003079DC /* RemoteDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933A72332A7BC3DB003079DC /* RemoteDataSourceTests.swift */; };
+		933A72382A7BC4FC003079DC /* URLProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933A72372A7BC4FC003079DC /* URLProtocolMock.swift */; };
+		933A723A2A7C2073003079DC /* NetworkFetchingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933A72392A7C2073003079DC /* NetworkFetchingProtocol.swift */; };
+		933A723C2A7C21A6003079DC /* NetworkFetchingMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933A723B2A7C21A6003079DC /* NetworkFetchingMock.swift */; };
+		933A72402A7D1B9D003079DC /* URLSessionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933A723F2A7D1B9D003079DC /* URLSessionExtension.swift */; };
 		9343A6782A78450C0021E66D /* TheMealPrepAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9343A6772A78450C0021E66D /* TheMealPrepAppApp.swift */; };
 		9343A67C2A78450C0021E66D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9343A67B2A78450C0021E66D /* Assets.xcassets */; };
 		9343A67F2A78450C0021E66D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9343A67E2A78450C0021E66D /* Preview Assets.xcassets */; };
@@ -50,6 +55,11 @@
 /* Begin PBXFileReference section */
 		933A722C2A7A9F56003079DC /* YouTubeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeView.swift; sourceTree = "<group>"; };
 		933A722F2A7AA269003079DC /* AreaEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaEnum.swift; sourceTree = "<group>"; };
+		933A72332A7BC3DB003079DC /* RemoteDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSourceTests.swift; sourceTree = "<group>"; };
+		933A72372A7BC4FC003079DC /* URLProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolMock.swift; sourceTree = "<group>"; };
+		933A72392A7C2073003079DC /* NetworkFetchingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFetchingProtocol.swift; sourceTree = "<group>"; };
+		933A723B2A7C21A6003079DC /* NetworkFetchingMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFetchingMock.swift; sourceTree = "<group>"; };
+		933A723F2A7D1B9D003079DC /* URLSessionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExtension.swift; sourceTree = "<group>"; };
 		9343A6742A78450C0021E66D /* TheMealPrepApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheMealPrepApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9343A6772A78450C0021E66D /* TheMealPrepAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMealPrepAppApp.swift; sourceTree = "<group>"; };
 		9343A67B2A78450C0021E66D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -115,6 +125,39 @@
 			path = Enums;
 			sourceTree = "<group>";
 		};
+		933A72312A7BC38D003079DC /* Suts */ = {
+			isa = PBXGroup;
+			children = (
+				933A72332A7BC3DB003079DC /* RemoteDataSourceTests.swift */,
+			);
+			path = Suts;
+			sourceTree = "<group>";
+		};
+		933A72322A7BC392003079DC /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				933A72372A7BC4FC003079DC /* URLProtocolMock.swift */,
+				933A723B2A7C21A6003079DC /* NetworkFetchingMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		933A723D2A7D1B70003079DC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				933A723E2A7D1B74003079DC /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		933A723E2A7D1B74003079DC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				933A723F2A7D1B9D003079DC /* URLSessionExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		9343A66B2A78450B0021E66D = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +200,8 @@
 		9343A6872A78450D0021E66D /* TheMealPrepAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				933A72322A7BC392003079DC /* Mocks */,
+				933A72312A7BC38D003079DC /* Suts */,
 				9343A6882A78450D0021E66D /* TheMealPrepAppTests.swift */,
 			);
 			path = TheMealPrepAppTests;
@@ -203,6 +248,7 @@
 		9343A6AC2A784C7A0021E66D /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				933A723D2A7D1B70003079DC /* Utils */,
 				933A722E2A7AA259003079DC /* Enums */,
 				9343A6BD2A7945B40021E66D /* Protocols */,
 				9343A6AB2A784C6F0021E66D /* Models */,
@@ -251,6 +297,7 @@
 			children = (
 				9343A6C72A794CF20021E66D /* RemoteDataSourceProtocol.swift */,
 				9343A6C92A794CFB0021E66D /* RepositoryProtocol.swift */,
+				933A72392A7C2073003079DC /* NetworkFetchingProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -432,6 +479,8 @@
 				9343A6D02A79A0300021E66D /* MealsResponse.swift in Sources */,
 				9343A6D92A7A3ABB0021E66D /* ListViewModel.swift in Sources */,
 				933A722D2A7A9F56003079DC /* YouTubeView.swift in Sources */,
+				933A723A2A7C2073003079DC /* NetworkFetchingProtocol.swift in Sources */,
+				933A72402A7D1B9D003079DC /* URLSessionExtension.swift in Sources */,
 				9343A6782A78450C0021E66D /* TheMealPrepAppApp.swift in Sources */,
 				9343A6CC2A794F580021E66D /* RemoteDataSourceImpl.swift in Sources */,
 				9343A6CE2A7958920021E66D /* RepositoryImpl.swift in Sources */,
@@ -442,6 +491,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				933A723C2A7C21A6003079DC /* NetworkFetchingMock.swift in Sources */,
+				933A72342A7BC3DB003079DC /* RemoteDataSourceTests.swift in Sources */,
+				933A72382A7BC4FC003079DC /* URLProtocolMock.swift in Sources */,
 				9343A6892A78450D0021E66D /* TheMealPrepAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
