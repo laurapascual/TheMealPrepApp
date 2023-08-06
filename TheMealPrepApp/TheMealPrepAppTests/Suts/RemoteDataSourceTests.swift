@@ -32,7 +32,7 @@ final class RemoteDataSourceTests: XCTestCase {
             
             URLProtocolMock.requestHandler = { request in
                 let response = HTTPURLResponse(url: request.url!, statusCode: 200, httpVersion: nil, headerFields: nil)!
-                let meals = [Meal(id: "", image: URL(string: "url")!, name: "name", instructions: "", area: "", tags: "", videoUrl: "")]
+                let meals = MealsResponse(meals: [Meal(id: "1", image: URL(string: "url")!, name: "name", instructions: "", area: "", tags: "", videoUrl: "")])
                 let data = try JSONEncoder().encode(meals)
                 return (response, data)
             }

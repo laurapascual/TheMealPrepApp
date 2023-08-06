@@ -1,0 +1,37 @@
+{
+  "configurations" : [
+    {
+      "id" : "7E5231E2-CF62-41E0-9A7C-E0616913FCF8",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:TheMealPrepApp.xcodeproj",
+      "identifier" : "9343A6732A78450B0021E66D",
+      "name" : "TheMealPrepApp"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:TheMealPrepApp.xcodeproj",
+        "identifier" : "9343A6832A78450D0021E66D",
+        "name" : "TheMealPrepAppTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:TheMealPrepApp.xcodeproj",
+        "identifier" : "9343A68D2A78450D0021E66D",
+        "name" : "TheMealPrepAppUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
