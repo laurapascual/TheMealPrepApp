@@ -27,11 +27,8 @@ final class RootViewModel: ObservableObject {
         }
     
     func onClick() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.status = .loaded
-                                        }
-        status = .loading
-        
+       status = .loaded
+   
     }
     
     func goToHome() {

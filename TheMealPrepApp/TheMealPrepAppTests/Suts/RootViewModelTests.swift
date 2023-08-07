@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import Combine
 @testable import TheMealPrepApp
 
 final class RootViewModelTests: XCTestCase {
@@ -24,9 +25,14 @@ final class RootViewModelTests: XCTestCase {
     }
 
     func testRootViewModelOnClick() throws {
-        XCTAssertEqual(sut?.status, .default)
         sut?.onClick()
-        
+        XCTAssertEqual(sut?.status, .loaded)
     }
-
+    
+    
+    func testRootViewModelGoToHome() {
+        sut?.goToHome()
+        
+        XCTAssertEqual(sut?.status, .default)
+    }
 }

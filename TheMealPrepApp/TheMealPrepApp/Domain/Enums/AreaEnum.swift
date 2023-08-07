@@ -9,7 +9,7 @@ import Foundation
 
 enum AreaEnum: String, CaseIterable, Hashable {
     case none = ""
-    case american = "American"
+    case american = "American 🇺🇸"
     case british = "British"
     case canadian = "Canadian"
     case chinese = "Chinese"

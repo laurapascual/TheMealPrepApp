@@ -23,7 +23,13 @@ final class RemoteDataSourceImpl: RemoteDataSourceProtocol {
             guard let url = getMealsSession(letter: letter) else {
                         return []
                     }
-                    let (data, _) = try await session.data(url: url)
+            var (data, _): (Data, URLResponse) = (Data(), URLResponse())
+            do {
+               (data, _) = try await session.data(url: url)
+            }
+            catch {
+                continue
+            }
             let mealsResponse = try JSONDecoder().decode(MealsResponse.self, from: data)
             arrayMeals.append(contentsOf: mealsResponse.meals)
         }

@@ -6,9 +6,9 @@
 //
 
 import Foundation
+import SwiftUI
 
 final class ListViewModel: ObservableObject {
-    
     let repository: RepositoryProtocol
     @Published var filterOption: AreaEnum = .none
     @Published var searchText = ""
@@ -17,7 +17,7 @@ final class ListViewModel: ObservableObject {
     var filteredMeals: [Meal] {
         let meals = self.meals
         guard !filterOption.rawValue.isEmpty else {return meals}
-        return meals.filter{$0.area.contains(filterOption.rawValue)}
+        return meals.filter{$0.area.contains(filterOption.rawValue.components(separatedBy: " ")[0])}
     }
     
     var searchedMeals: [Meal] {

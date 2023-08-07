@@ -3,4 +3,149 @@
    uuid = "1140FD06-AEA0-42DB-ADB3-AB6FDC4704DC"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5537E560-E79B-4C08-9534-71A470BBA860"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMealPrepApp/Data/Remote/RemoteDataSourceImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "getMeals()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BBC6329D-951D-4843-A2B0-411A9BBDA607"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMealPrepApp/Data/Remote/RemoteDataSourceImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "getMeals()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BBC6329D-951D-4843-A2B0-411A9BBDA607 - e152983511b6f398"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for TheMealPrepApp.RemoteDataSourceImpl.getMeals() async throws -&gt; Swift.Array&lt;TheMealPrepApp.Meal&gt;"
+                  moduleName = "TheMealPrepApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/n158446/Library/CloudStorage/OneDrive-SantanderOffice365/Documentos/Proyecto%20Final/TheMealPrepApp/TheMealPrepApp/TheMealPrepApp/Data/Remote/RemoteDataSourceImpl.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "704">
+               </Location>
+               <Location
+                  uuid = "BBC6329D-951D-4843-A2B0-411A9BBDA607 - 521b8e44bc3db096"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for TheMealPrepApp.RemoteDataSourceImpl.getMeals() async throws -&gt; Swift.Array&lt;TheMealPrepApp.Meal&gt;"
+                  moduleName = "TheMealPrepApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/n158446/Library/CloudStorage/OneDrive-SantanderOffice365/Documentos/Proyecto%20Final/TheMealPrepApp/TheMealPrepApp/TheMealPrepApp/Data/Remote/RemoteDataSourceImpl.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "968">
+               </Location>
+               <Location
+                  uuid = "BBC6329D-951D-4843-A2B0-411A9BBDA607 - 747ff77cf5ff1715"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for TheMealPrepApp.RemoteDataSourceImpl.getMeals() async throws -&gt; Swift.Array&lt;TheMealPrepApp.Meal&gt;"
+                  moduleName = "TheMealPrepApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/n158446/Library/CloudStorage/OneDrive-SantanderOffice365/Documentos/Proyecto%20Final/TheMealPrepApp/TheMealPrepApp/TheMealPrepApp/Data/Remote/RemoteDataSourceImpl.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "728">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B8A01E72-A700-4406-8855-56572BA26BB9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMealPrepApp/Data/Remote/RemoteDataSourceImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "getMeals()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B8A01E72-A700-4406-8855-56572BA26BB9 - 521b8e44bc3db74d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for TheMealPrepApp.RemoteDataSourceImpl.getMeals() async throws -&gt; Swift.Array&lt;TheMealPrepApp.Meal&gt;"
+                  moduleName = "TheMealPrepApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/n158446/Library/CloudStorage/OneDrive-SantanderOffice365/Documentos/Proyecto%20Final/TheMealPrepApp/TheMealPrepApp/TheMealPrepApp/Data/Remote/RemoteDataSourceImpl.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "208">
+               </Location>
+               <Location
+                  uuid = "B8A01E72-A700-4406-8855-56572BA26BB9 - 521b8e44bc3db74d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for TheMealPrepApp.RemoteDataSourceImpl.getMeals() async throws -&gt; Swift.Array&lt;TheMealPrepApp.Meal&gt;"
+                  moduleName = "TheMealPrepApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/n158446/Library/CloudStorage/OneDrive-SantanderOffice365/Documentos/Proyecto%20Final/TheMealPrepApp/TheMealPrepApp/TheMealPrepApp/Data/Remote/RemoteDataSourceImpl.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "1220">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FC984172-A331-4B79-A1CC-F1373672189A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMealPrepApp/Data/Remote/RemoteDataSourceImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "getMeals()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
