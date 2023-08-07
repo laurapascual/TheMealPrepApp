@@ -18,23 +18,23 @@ struct HomeView: View {
             Button {
                 rootViewModel.onClick()
             } label: {
-                    Text("Start cooking")
+                Text("Start cooking")
                         .font(.title3)
                         .fontWeight(.semibold)
                         .foregroundStyle(.black)
-                        .frame(width: 220, height: 50)
+                        .frame(width: 150, height: 50)
                     
                     Image("utensilios")
                         .resizable()
                         .frame(width: 30, height: 50)
-                        .rotation3DEffect(.degrees(utensilios ? 0 : -10), axis: (x: 0, y: 0, z: 0))
+                        .rotation3DEffect(.degrees(utensilios ? 0 : -10), axis: (x: 0, y: 0, z: 10))
                         .offset(y: utensilios ? -10 : 0)
                         .onAppear{
                             withAnimation(.easeInOut(duration: 1).delay(0.5).repeatForever(autoreverses: true)){
                                 utensilios.toggle()
                             }
                         }.padding()
-            }    .background(Color(uiColor: UIColor(red: 255/255, green: 171/255, blue: 61/255, alpha: 1)))
+            }.background(Color(uiColor: UIColor(red: 255/255, green: 171/255, blue: 61/255, alpha: 1)))
                 .cornerRadius(10.0)
                 .shadow(radius: 0, x: 10, y: 10)
         }
