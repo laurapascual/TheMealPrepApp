@@ -16,7 +16,7 @@ final class RepositoryImpl: RepositoryProtocol {
             self.remoteDataSource = remoteDataSource
         }
     
-    func getMeals() async throws -> [Meal]? {
+    func getMeals() async throws -> [Meal] {
         return try await remoteDataSource.getMeals()
     }
     

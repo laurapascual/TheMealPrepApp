@@ -9,7 +9,7 @@ import Foundation
 
 final class ListViewModel: ObservableObject {
     
-    private let repository: RepositoryProtocol
+    let repository: RepositoryProtocol
     @Published var filterOption: AreaEnum = .none
     @Published var searchText = ""
     @Published var meals: [Meal] = []
@@ -28,16 +28,20 @@ final class ListViewModel: ObservableObject {
         
         init(repository: RepositoryProtocol) {
             self.repository = repository
-            DispatchQueue.main.async {
-                Task {
-                    guard let mealsFromApi = try? await repository.getMeals() else {
-                        self.meals = []
-                        print("Unable to get meals from api")
-                        return
-                    }
-                    self.meals = mealsFromApi
+            self.getAllMeals()
+        }
+    
+    func getAllMeals() {
+        DispatchQueue.main.async {
+            Task {
+                guard let mealsFromApi = try? await self.repository.getMeals() else {
+                    self.meals = []
+                    print("Unable to get meals from api")
+                    return
                 }
+                self.meals = mealsFromApi
             }
         }
+    }
     
 }

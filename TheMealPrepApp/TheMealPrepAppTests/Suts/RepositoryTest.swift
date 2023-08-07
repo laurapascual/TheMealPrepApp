@@ -8,7 +8,7 @@
 import XCTest
 @testable import TheMealPrepApp
 
-final class RepositoryTests: XCTestCase {
+final class RepositoryTest: XCTestCase {
     
     var sut: RepositoryProtocol?
 
