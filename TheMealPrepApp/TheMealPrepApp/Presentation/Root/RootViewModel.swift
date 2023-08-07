@@ -20,7 +20,6 @@ final class RootViewModel: ObservableObject {
     
     let repository: RepositoryProtocol
     @Published var status = Status.default
-    private var subscribers = Set<AnyCancellable>()
     
     init(repository: RepositoryProtocol, status: Status = Status.default) {
         self.repository = repository

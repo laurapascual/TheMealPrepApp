@@ -9,10 +9,18 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject var rootViewModel: RootViewModel
+    @State private var utensilios = false
     
     var body: some View {
         ZStack{
             Image(decorative: "foodImage").resizable().aspectRatio(contentMode: .fill).ignoresSafeArea()
+            Image( "utensilios").rotation3DEffect(.degrees(utensilios ? 0 : -180), axis: (x: 0, y: 1, z: 0))
+                .offset(y: utensilios ? -150 : 0)
+                .onAppear{
+                    withAnimation(.easeInOut(duration: 1).delay(0.5).repeatForever(autoreverses: true)){
+                        utensilios.toggle()
+                    }
+                }
             Button {
                 rootViewModel.onClick()
             } label: {
