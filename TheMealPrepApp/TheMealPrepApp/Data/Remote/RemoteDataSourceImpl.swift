@@ -11,7 +11,7 @@ final class RemoteDataSourceImpl: RemoteDataSourceProtocol {
     
     private let session: NetworkFetchingProtocol
     private let server: String = "https://www.themealdb.com/api/json/v1/1/search.php?f="
-    private let letters = ["a","b","c","d","e","f","g","h","i","k","l","m","n","o","p","r","s","t","v","w","y"]
+    private let letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","r","s","t","v","w","y"]
     
     init(session: NetworkFetchingProtocol = URLSession.shared) {
             self.session = session

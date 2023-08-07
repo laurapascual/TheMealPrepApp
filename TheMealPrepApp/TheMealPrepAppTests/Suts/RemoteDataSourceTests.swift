@@ -47,5 +47,30 @@ final class RemoteDataSourceTests: XCTestCase {
             XCTAssertNotNil(meals.first)
             XCTAssertEqual(meals.first?.name, "name")
         }
+    
+//    func testRemoteDataSource_whenGetMealsWithFailResult_expectNil() async throws {
+//            // GIVEN
+//            let configuration = URLSessionConfiguration.default
+//            configuration.protocolClasses = [URLProtocolMock.self]
+//
+//            let mockURLSession = URLSession.init(configuration: configuration)
+//            sut = RemoteDataSourceImpl(session: mockURLSession)
+//
+//            URLProtocolMock.requestHandler = { request in
+//                let response = HTTPURLResponse(url: URL(string: "url")!, statusCode: 404, httpVersion: nil, headerFields: nil)!
+//                let meals = MealsResponse(meals: [])
+//                let data = try JSONEncoder().encode(meals)
+//                return (response, data)
+//            }
+//
+//            // WHEN
+//            guard let meals = try? await sut?.getMeals() else {
+//                XCTFail("Meals must contain a meal")
+//                return
+//            }
+//
+//            // THEN
+//            XCTAssertNil(meals.first)
+//        }
 
 }
