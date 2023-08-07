@@ -36,6 +36,7 @@
 		9383E75A2A80C5D9001821E0 /* RemoteDataSourceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9383E7592A80C5D9001821E0 /* RemoteDataSourceMock.swift */; };
 		9383E75C2A80CAD3001821E0 /* ListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9383E75B2A80CAD3001821E0 /* ListViewModelTests.swift */; };
 		9383E75E2A80CB1D001821E0 /* RepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9383E75D2A80CB1D001821E0 /* RepositoryMock.swift */; };
+		9383E7602A810D08001821E0 /* RootViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9383E75F2A810D08001821E0 /* RootViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		9383E7592A80C5D9001821E0 /* RemoteDataSourceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSourceMock.swift; sourceTree = "<group>"; };
 		9383E75B2A80CAD3001821E0 /* ListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelTests.swift; sourceTree = "<group>"; };
 		9383E75D2A80CB1D001821E0 /* RepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryMock.swift; sourceTree = "<group>"; };
+		9383E75F2A810D08001821E0 /* RootViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 				933A72332A7BC3DB003079DC /* RemoteDataSourceTests.swift */,
 				9383E7572A80C451001821E0 /* RepositoryTest.swift */,
 				9383E75B2A80CAD3001821E0 /* ListViewModelTests.swift */,
+				9383E75F2A810D08001821E0 /* RootViewModelTests.swift */,
 			);
 			path = Suts;
 			sourceTree = "<group>";
@@ -508,6 +511,7 @@
 				933A72342A7BC3DB003079DC /* RemoteDataSourceTests.swift in Sources */,
 				9383E75E2A80CB1D001821E0 /* RepositoryMock.swift in Sources */,
 				933A72382A7BC4FC003079DC /* URLProtocolMock.swift in Sources */,
+				9383E7602A810D08001821E0 /* RootViewModelTests.swift in Sources */,
 				9383E7582A80C451001821E0 /* RepositoryTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

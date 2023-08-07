@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-enum Status {
+enum Status: Equatable {
     case `default`
     case loading
     case loaded

@@ -12,7 +12,6 @@ struct RootView: View {
     @EnvironmentObject var rootViewModel: RootViewModel
     
     
-    
     var body: some View {
         switch (rootViewModel.status) {
             
@@ -21,6 +20,7 @@ struct RootView: View {
         
         case Status.loading:
             ProgressView()
+
         
         case Status.error(error: let errorString):
             Text("Error \(errorString)")
