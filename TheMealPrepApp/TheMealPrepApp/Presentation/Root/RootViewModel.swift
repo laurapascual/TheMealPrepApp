@@ -10,7 +10,6 @@ import Combine
 
 enum Status: Equatable {
     case `default`
-    case loading
     case loaded
     case error(error: String)
 }
@@ -27,8 +26,7 @@ final class RootViewModel: ObservableObject {
         }
     
     func onClick() {
-       status = .loaded
-   
+        status = .loaded
     }
     
     func goToHome() {

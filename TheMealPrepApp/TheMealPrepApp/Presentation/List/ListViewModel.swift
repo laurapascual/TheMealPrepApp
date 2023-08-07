@@ -8,11 +8,17 @@
 import Foundation
 import SwiftUI
 
+enum StatusList: Equatable {
+    case loading
+    case loaded
+}
+
 final class ListViewModel: ObservableObject {
     let repository: RepositoryProtocol
     @Published var filterOption: AreaEnum = .none
     @Published var searchText = ""
     @Published var meals: [Meal] = []
+    @Published var statusList = StatusList.loading
     
     var filteredMeals: [Meal] {
         let meals = self.meals
@@ -39,6 +45,7 @@ final class ListViewModel: ObservableObject {
                     print("Unable to get meals from api")
                     return
                 }
+                self.statusList = .loaded
                 self.meals = mealsFromApi
             }
         }

@@ -11,7 +11,7 @@ final class RemoteDataSourceImpl: RemoteDataSourceProtocol {
     
     private let session: NetworkFetchingProtocol
     private let server: String = "https://www.themealdb.com/api/json/v1/1/search.php?f="
-    private let letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","r","s","t","v","w","y"]
+    private let letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u", "v","w","x","y","z"]
     
     init(session: NetworkFetchingProtocol = URLSession.shared) {
             self.session = session
@@ -21,17 +21,20 @@ final class RemoteDataSourceImpl: RemoteDataSourceProtocol {
         var arrayMeals: [Meal] = []
         for letter in letters {
             guard let url = getMealsSession(letter: letter) else {
-                        return []
-                    }
+                return []
+            }
+            
             var (data, _): (Data, URLResponse) = (Data(), URLResponse())
+            
             do {
-               (data, _) = try await session.data(url: url)
+                (data, _) = try await session.data(url: url)
+                let mealsResponse = try JSONDecoder().decode(MealsResponse.self, from: data)
+                arrayMeals.append(contentsOf: mealsResponse.meals)
             }
             catch {
                 continue
             }
-            let mealsResponse = try JSONDecoder().decode(MealsResponse.self, from: data)
-            arrayMeals.append(contentsOf: mealsResponse.meals)
+            
         }
         
         return arrayMeals

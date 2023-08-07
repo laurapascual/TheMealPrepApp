@@ -11,16 +11,11 @@ struct RootView: View {
     
     @EnvironmentObject var rootViewModel: RootViewModel
     
-    
     var body: some View {
         switch (rootViewModel.status) {
             
         case Status.`default`:
             HomeView()
-        
-        case Status.loading:
-            ProgressView()
-
         
         case Status.error(error: let errorString):
             Text("Error \(errorString)")

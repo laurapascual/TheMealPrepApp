@@ -25,15 +25,20 @@ struct ListView: View {
                         Text(area.rawValue)
                     }
                 }
-                ForEach(listViewModel.searchedMeals) { meal in
-                    NavigationLink {
-                        MealDetailView(meal: meal)
-                    } label: {
-                        ListCellView(meal: meal)
-                    }
-                }.navigationTitle(Text("Meals list")) .navigationBarTitleDisplayMode(.inline) .listRowSeparator(.hidden)
-                    .overlay(RoundedRectangle(cornerRadius: 15)
-                        .stroke(style: StrokeStyle(lineWidth: 1, dash: [15.0])))
+                switch (listViewModel.statusList) {
+                case StatusList.loading:
+                    ProgressView()
+                case StatusList.loaded:
+                    ForEach(listViewModel.searchedMeals) { meal in
+                        NavigationLink {
+                            MealDetailView(meal: meal)
+                        } label: {
+                            ListCellView(meal: meal)
+                        }
+                    }.navigationTitle(Text("Meals list")) .navigationBarTitleDisplayMode(.inline) .listRowSeparator(.hidden)
+                        .overlay(RoundedRectangle(cornerRadius: 15)
+                            .stroke(style: StrokeStyle(lineWidth: 1, dash: [15.0])))
+                }
             }
             .toolbar {
                 Button("Back") {
@@ -44,6 +49,7 @@ struct ListView: View {
         }.scrollContentBackground(.hidden)
             .searchable(text: $listViewModel.searchText)
     }
+
     struct ListView_Previews: PreviewProvider {
         static var previews: some View {
             ListView(listViewModel: ListViewModel(repository: RepositoryImpl(remoteDataSource: RemoteDataSourceImpl())))
