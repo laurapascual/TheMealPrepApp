@@ -13,7 +13,7 @@ struct HomeView: View {
     
     var body: some View {
         ZStack{
-            Image(decorative: "foodImage").resizable().aspectRatio(contentMode: .fill).ignoresSafeArea()
+            Image(decorative: "foodImage").resizable().aspectRatio(contentMode: .fill).ignoresSafeArea().accessibilityLabel("Food image background")
             
             Button {
                 rootViewModel.onClick()
@@ -34,7 +34,10 @@ struct HomeView: View {
                                 utensilios.toggle()
                             }
                         }.padding()
-            }.background(Color(uiColor: UIColor(red: 255/255, green: 171/255, blue: 61/255, alpha: 1)))
+            }.accessibilityAddTraits([.isButton])
+                .accessibilityLabel("Start cooking button")
+                .accessibilityHint("Start using the app")
+                .background(Color(uiColor: UIColor(red: 255/255, green: 171/255, blue: 61/255, alpha: 1)))
                 .cornerRadius(10.0)
                 .shadow(radius: 0, x: 10, y: 10)
         }
