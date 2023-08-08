@@ -24,11 +24,16 @@ final class ListViewModelTests: XCTestCase {
     }
 
     func testListViewModel_whenGetMeals_expectMealsFromApi() throws {
-        sut?.getAllMeals()
-        XCTAssertNotNil(sut?.meals)
+        let expectation = XCTestExpectation(description: "Error")
+        sut?.getAllMeals() {
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 1.0)
+        XCTAssertNotNil(sut?.meals, "Error: Meals")
+        XCTAssertNotEqual(sut?.meals.count, 0, "Error: No meals")
     }
     
-    func testFilteredMealsComputedProperty() {
+    func testFilteredMealsComputedProperty() throws {
         let meals = [Meal(id: "1", image: URL(string: "image1")!, name: "name1", instructions: "ins1", area: "American", tags: "", videoUrl: ""),
         Meal(id: "2", image: URL(string: "image1")!, name: "name2", instructions: "inst2", area: "British", tags: "", videoUrl: ""),
         Meal(id: "3", image: URL(string: "image3")!, name: "name3", instructions: "inst3", area: "Spanish", tags: "", videoUrl: "")
@@ -45,22 +50,25 @@ final class ListViewModelTests: XCTestCase {
         XCTAssertEqual(listViewModel.filteredMeals.count, 0)
     }
     
-    func testSearchMealsComputedProperty_expectMealSearched() {
+    func testSearchMealsComputedProperty_expectMealSearched() throws {
         let meals = [Meal(id: "1", image: URL(string: "image1")!, name: "name1", instructions: "ins1", area: "American", tags: "", videoUrl: ""),
         Meal(id: "2", image: URL(string: "image1")!, name: "name2", instructions: "inst2", area: "British", tags: "", videoUrl: ""),
         Meal(id: "3", image: URL(string: "image3")!, name: "name3", instructions: "inst3", area: "Spanish", tags: "", videoUrl: "")
         ]
-        let listViewModel = ListViewModel(repository: RepositoryMock())
-        listViewModel.meals = meals
-        listViewModel.filterOption = .none
-        listViewModel.searchText = "name1"
+        sut?.meals = meals
+        sut?.filterOption = .none
+        sut?.searchText = "name1"
         
-        XCTAssertEqual(listViewModel.searchedMeals.first?.name, "name1", "Error: The search not match")
+        let expectation = XCTestExpectation(description: "Error")
+        
+        XCTAssertNotNil(sut?.searchedMeals.first, "Error: There are no meals with that search")
+        XCTAssertEqual(sut?.searchedMeals.first?.name, "name1")
+        XCTAssertEqual(sut?.searchedMeals.count, 1, "Error: The number of meals does not match")
         
     }
     
     
-    func testSearchMealsComputedProperty_emptySearch() {
+    func testSearchMealsComputedProperty_emptySearch() throws {
         let meals = [Meal(id: "1", image: URL(string: "image1")!, name: "name1", instructions: "ins1", area: "American", tags: "", videoUrl: ""),
         Meal(id: "2", image: URL(string: "image1")!, name: "name2", instructions: "inst2", area: "British", tags: "", videoUrl: ""),
         Meal(id: "3", image: URL(string: "image3")!, name: "name3", instructions: "inst3", area: "Spanish", tags: "", videoUrl: "")

@@ -25,6 +25,8 @@ struct ListView: View {
                         Text(area.rawValue)
                     }
                 }
+                .accessibilityLabel("Filter by area")
+                .accessibilityHint("Display the picker to choose the recipes by area")
                 switch (listViewModel.statusList) {
                 case StatusList.loading:
                     ProgressView()
@@ -34,6 +36,7 @@ struct ListView: View {
                             MealDetailView(meal: meal)
                         } label: {
                             ListCellView(meal: meal)
+                                .accessibilityLabel("Filter by area")
                         }
                     }.navigationTitle(Text("Meals list")) .navigationBarTitleDisplayMode(.inline) .listRowSeparator(.hidden)
                         .overlay(RoundedRectangle(cornerRadius: 15)
@@ -44,10 +47,15 @@ struct ListView: View {
                 Button("Back") {
                     rootViewModel.goToHome()
                 }
+                .accessibilityAddTraits([.isButton])
+                .accessibilityLabel("Back button")
+                .accessibilityHint("Press to back to HomeView")
             }
             
         }.scrollContentBackground(.hidden)
             .searchable(text: $listViewModel.searchText)
+            .accessibilityLabel("Search recipes by name")
+            .accessibilityHint("Write the recipe you are looking for")
     }
 
     struct ListView_Previews: PreviewProvider {

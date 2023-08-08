@@ -14,15 +14,23 @@ struct MealDetailView: View {
         ScrollView {
             VStack {
                 Text("\(meal.name) Recipe")
+                    .accessibilityAddTraits([.isHeader])
+                    .underline()
                     .fontWeight(.semibold)
                     .font(.system(size: 20))
+                    .lineLimit(nil)
                     .padding(EdgeInsets(top: 10, leading: 0, bottom: 20, trailing: 0))
+                    .accessibilityLabel("Meal name")
                 Text(meal.instructions)
                     .multilineTextAlignment(.center)
                     .padding(EdgeInsets(top: 0, leading: 20, bottom: 20, trailing: 20))
+                    .accessibilityLabel("Meal instructions")
                 YouTubeView(videoId: meal.videoUrl.components(separatedBy: "=")[1])
+                    .accessibilityAddTraits([.startsMediaSession])
                     .frame(width: 350, height: 200)
                     .padding(20)
+                    .accessibilityLabel("Recipe video")
+                    .accessibilityHint("Click to play the recipe video")
             }
         }
     }

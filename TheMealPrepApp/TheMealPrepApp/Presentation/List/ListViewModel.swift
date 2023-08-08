@@ -37,7 +37,7 @@ final class ListViewModel: ObservableObject {
             self.getAllMeals()
         }
     
-    func getAllMeals() {
+    func getAllMeals(completion: @escaping () -> () = {}) {
         DispatchQueue.main.async {
             Task {
                 guard let mealsFromApi = try? await self.repository.getMeals() else {
@@ -47,6 +47,7 @@ final class ListViewModel: ObservableObject {
                 }
                 self.statusList = .loaded
                 self.meals = mealsFromApi
+                completion()
             }
         }
     }
