@@ -23,7 +23,6 @@ final class RemoteDataSourceImpl: RemoteDataSourceProtocol {
             guard let url = getMealsSession(letter: letter) else {
                 return []
             }
-            
             var (data, _): (Data, URLResponse) = (Data(), URLResponse())
             
             do {
@@ -34,9 +33,7 @@ final class RemoteDataSourceImpl: RemoteDataSourceProtocol {
             catch {
                 continue
             }
-            
         }
-        
         return arrayMeals
     }
 }
