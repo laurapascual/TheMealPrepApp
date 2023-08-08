@@ -19,12 +19,28 @@ struct MealDetailView: View {
                     .fontWeight(.semibold)
                     .font(.system(size: 20))
                     .lineLimit(nil)
-                    .padding(EdgeInsets(top: 10, leading: 0, bottom: 20, trailing: 0))
+                    .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
                     .accessibilityLabel("Meal name")
+                
+                AsyncImage(url: meal.image,
+                           content: { image in
+                               image
+                            .resizable()
+                            .clipShape(Circle())
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 150, height: 150)
+                            
+                           },
+                           placeholder: {
+                               ProgressView()
+                })
+                .accessibilityLabel("Recipe image")
+                
                 Text(meal.instructions)
                     .multilineTextAlignment(.center)
                     .padding(EdgeInsets(top: 0, leading: 20, bottom: 20, trailing: 20))
                     .accessibilityLabel("Meal instructions")
+                
                 YouTubeView(videoId: meal.videoUrl.components(separatedBy: "=")[1])
                     .accessibilityAddTraits([.startsMediaSession])
                     .frame(width: 350, height: 200)
