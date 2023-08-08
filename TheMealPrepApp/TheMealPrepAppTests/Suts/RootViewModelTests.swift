@@ -32,7 +32,6 @@ final class RootViewModelTests: XCTestCase {
     
     func testRootViewModelGoToHome() {
         sut?.goToHome()
-        
         XCTAssertEqual(sut?.status, .default)
     }
 }
