@@ -31,8 +31,17 @@ struct ListView: View {
                 switch (listViewModel.statusList) {
                     
                 case StatusList.loading:
-                    ProgressView("Looking for meals...")
-                        .font(.system(size:12))
+                    ZStack(){
+                        Color.clear
+                        VStack() {
+                            Spacer()
+                            ProgressView("Looking for meals...🔍")
+                                .font(.system(size:16))
+                            Spacer()
+                        }
+                    }
+                    
+                        
                     
                 case StatusList.loaded:
                     ForEach(listViewModel.searchedMeals) { meal in
