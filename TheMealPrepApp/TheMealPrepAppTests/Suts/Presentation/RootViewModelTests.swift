@@ -6,7 +6,6 @@
 //
 
 import XCTest
-import Combine
 @testable import TheMealPrepApp
 
 final class RootViewModelTests: XCTestCase {
@@ -24,13 +23,13 @@ final class RootViewModelTests: XCTestCase {
         try super.tearDownWithError()
     }
 
-    func testRootViewModelOnClick() throws {
+    func testRootViewModel_whenOnClick_expectStatusLoaded() throws {
         sut?.onClick()
         XCTAssertEqual(sut?.status, .loaded)
     }
     
     
-    func testRootViewModelGoToHome() {
+    func testRootViewModel_whenGoToHome_expectStatusDefault() {
         sut?.goToHome()
         XCTAssertEqual(sut?.status, .default)
     }

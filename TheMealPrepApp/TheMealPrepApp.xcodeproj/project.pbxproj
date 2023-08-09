@@ -122,6 +122,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		930C86622A83A3D000CEAD6B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				933A72332A7BC3DB003079DC /* RemoteDataSourceTests.swift */,
+				9383E7572A80C451001821E0 /* RepositoryTest.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		930C86632A83A3F000CEAD6B /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				9383E75B2A80CAD3001821E0 /* ListViewModelTests.swift */,
+				9383E75F2A810D08001821E0 /* RootViewModelTests.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
 		933A722B2A7A9F41003079DC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,10 +161,8 @@
 		933A72312A7BC38D003079DC /* Suts */ = {
 			isa = PBXGroup;
 			children = (
-				933A72332A7BC3DB003079DC /* RemoteDataSourceTests.swift */,
-				9383E7572A80C451001821E0 /* RepositoryTest.swift */,
-				9383E75B2A80CAD3001821E0 /* ListViewModelTests.swift */,
-				9383E75F2A810D08001821E0 /* RootViewModelTests.swift */,
+				930C86632A83A3F000CEAD6B /* Presentation */,
+				930C86622A83A3D000CEAD6B /* Data */,
 			);
 			path = Suts;
 			sourceTree = "<group>";

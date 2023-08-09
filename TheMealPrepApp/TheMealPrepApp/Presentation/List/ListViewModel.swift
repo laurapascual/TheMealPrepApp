@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import SwiftUI
+//import SwiftUI
 
 final class ListViewModel: ObservableObject {
     let repository: RepositoryProtocol

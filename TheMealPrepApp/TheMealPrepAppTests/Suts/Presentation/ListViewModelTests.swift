@@ -33,7 +33,7 @@ final class ListViewModelTests: XCTestCase {
         XCTAssertNotEqual(sut?.meals.count, 0, "Error: No meals")
     }
     
-    func testFilteredMealsComputedProperty() throws {
+    func testFilteredMealsComputedProperty_whenFilterMeals_expectMeals() throws {
         let meals = [Meal(id: "1", image: URL(string: "image1")!, name: "name1", instructions: "ins1", area: "American", tags: "", videoUrl: ""),
         Meal(id: "2", image: URL(string: "image1")!, name: "name2", instructions: "inst2", area: "British", tags: "", videoUrl: ""),
         Meal(id: "3", image: URL(string: "image3")!, name: "name3", instructions: "inst3", area: "Spanish", tags: "", videoUrl: "")
@@ -50,7 +50,7 @@ final class ListViewModelTests: XCTestCase {
         XCTAssertEqual(listViewModel.filteredMeals.count, 0)
     }
     
-    func testSearchMealsComputedProperty_expectMealSearched() throws {
+    func testSearchMealsComputedProperty_whenSearchMeals_expectMealSearched() throws {
         let meals = [Meal(id: "1", image: URL(string: "image1")!, name: "name1", instructions: "ins1", area: "American", tags: "", videoUrl: ""),
         Meal(id: "2", image: URL(string: "image1")!, name: "name2", instructions: "inst2", area: "British", tags: "", videoUrl: ""),
         Meal(id: "3", image: URL(string: "image3")!, name: "name3", instructions: "inst3", area: "Spanish", tags: "", videoUrl: "")
@@ -68,7 +68,7 @@ final class ListViewModelTests: XCTestCase {
     }
     
     
-    func testSearchMealsComputedProperty_emptySearch() throws {
+    func testSearchMealsComputedProperty_whenSearcheMeals_expectEmptySearch() throws {
         let meals = [Meal(id: "1", image: URL(string: "image1")!, name: "name1", instructions: "ins1", area: "American", tags: "", videoUrl: ""),
         Meal(id: "2", image: URL(string: "image1")!, name: "name2", instructions: "inst2", area: "British", tags: "", videoUrl: ""),
         Meal(id: "3", image: URL(string: "image3")!, name: "name3", instructions: "inst3", area: "Spanish", tags: "", videoUrl: "")
@@ -79,7 +79,6 @@ final class ListViewModelTests: XCTestCase {
         listViewModel.searchText = ""
         
         XCTAssertEqual(listViewModel.searchedMeals.count, 3, "Error: The search return all the meals because is empty")
-        
     }
     
 }

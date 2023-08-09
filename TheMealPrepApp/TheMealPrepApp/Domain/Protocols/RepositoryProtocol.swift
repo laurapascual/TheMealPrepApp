@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Combine
 
 protocol RepositoryProtocol {
     func getMeals() async throws -> [Meal]

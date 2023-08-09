@@ -23,7 +23,7 @@ final class RemoteDataSourceTests: XCTestCase {
     }
 
     func testRemoteDataSource_whenGetMealsWithSuccessResult_expectMeals() async throws {
-            // GIVEN
+            
             let configuration = URLSessionConfiguration.default
             configuration.protocolClasses = [URLProtocolMock.self]
             
@@ -37,40 +37,12 @@ final class RemoteDataSourceTests: XCTestCase {
                 return (response, data)
             }
             
-            // WHEN
             guard let meals = try? await sut?.getMeals() else {
                 XCTFail("Meals must contain a meal")
                 return
             }
             
-            // THEN
             XCTAssertNotNil(meals.first)
             XCTAssertEqual(meals.first?.name, "name")
         }
-    
-//    func testRemoteDataSource_whenGetMealsWithSFailResult_expectNil() async throws {
-//            // GIVEN
-//            let configuration = URLSessionConfiguration.default
-//            configuration.protocolClasses = [URLProtocolMock.self]
-//
-//            let mockURLSession = URLSession.init(configuration: configuration)
-//            sut = RemoteDataSourceImpl(session: mockURLSession)
-//
-//            URLProtocolMock.requestHandler = { request in
-//                let response = HTTPURLResponse(url: request.url!, statusCode: 200, httpVersion: nil, headerFields: nil)!
-//                let meals = MealsResponse(meals: [Meal(id: "1", image: URL(string: "url")!, name: "name", instructions: "", area: "", tags: "", videoUrl: "")])
-//                let data = try JSONEncoder().encode(meals)
-//                return (response, data)
-//            }
-//
-//            // WHEN
-//            guard let meals = try? await sut?.getMeals() else {
-//                XCTFail("Meals must contain a meal")
-//                return
-//            }
-//
-//            // THEN
-//            XCTAssertNil(meals.first)
-//        }
-
 }
