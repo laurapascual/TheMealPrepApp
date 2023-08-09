@@ -37,9 +37,7 @@ final class RemoteDataSourceImpl: RemoteDataSourceProtocol {
         return arrayMeals
     }
 }
-
 extension RemoteDataSourceImpl {
-    
     func getMealsSession(letter: String) -> URLRequest? {
             guard let url = URL(string: "https://www.themealdb.com/api/json/v1/1/search.php?f=" + letter) else {
                 print("URL Error")

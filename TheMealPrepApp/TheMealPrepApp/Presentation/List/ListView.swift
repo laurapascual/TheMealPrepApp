@@ -41,8 +41,6 @@ struct ListView: View {
                         }
                     }
                     
-                        
-                    
                 case StatusList.loaded:
                     ForEach(listViewModel.searchedMeals) { meal in
                         NavigationLink {
@@ -68,7 +66,7 @@ struct ListView: View {
                 }
                 .accessibilityAddTraits([.isButton])
                 .accessibilityLabel("Back button")
-                .accessibilityHint("Press to back to HomeView")
+                .accessibilityHint("Press to return to HomeView")
             }
             
         }.scrollContentBackground(.hidden)

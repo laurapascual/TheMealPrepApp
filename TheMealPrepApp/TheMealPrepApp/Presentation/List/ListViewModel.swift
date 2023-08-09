@@ -8,11 +8,6 @@
 import Foundation
 import SwiftUI
 
-enum StatusList: Equatable {
-    case loading
-    case loaded
-}
-
 final class ListViewModel: ObservableObject {
     let repository: RepositoryProtocol
     @Published var filterOption: AreaEnum = .none

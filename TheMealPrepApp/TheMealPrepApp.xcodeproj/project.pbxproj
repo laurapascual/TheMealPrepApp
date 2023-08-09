@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		930C865F2A83864700CEAD6B /* StatusListEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930C865E2A83864700CEAD6B /* StatusListEnum.swift */; };
+		930C86612A83869600CEAD6B /* StatusEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930C86602A83869600CEAD6B /* StatusEnum.swift */; };
 		933A722D2A7A9F56003079DC /* YouTubeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933A722C2A7A9F56003079DC /* YouTubeView.swift */; };
 		933A72302A7AA269003079DC /* AreaEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933A722F2A7AA269003079DC /* AreaEnum.swift */; };
 		933A72342A7BC3DB003079DC /* RemoteDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933A72332A7BC3DB003079DC /* RemoteDataSourceTests.swift */; };
@@ -57,6 +59,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		930C865E2A83864700CEAD6B /* StatusListEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusListEnum.swift; sourceTree = "<group>"; };
+		930C86602A83869600CEAD6B /* StatusEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusEnum.swift; sourceTree = "<group>"; };
 		933A722C2A7A9F56003079DC /* YouTubeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeView.swift; sourceTree = "<group>"; };
 		933A722F2A7AA269003079DC /* AreaEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaEnum.swift; sourceTree = "<group>"; };
 		933A72332A7BC3DB003079DC /* RemoteDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSourceTests.swift; sourceTree = "<group>"; };
@@ -130,6 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				933A722F2A7AA269003079DC /* AreaEnum.swift */,
+				930C865E2A83864700CEAD6B /* StatusListEnum.swift */,
+				930C86602A83869600CEAD6B /* StatusEnum.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -490,11 +496,13 @@
 				933A72302A7AA269003079DC /* AreaEnum.swift in Sources */,
 				9343A6CA2A794CFB0021E66D /* RepositoryProtocol.swift in Sources */,
 				9343A6A82A7845BF0021E66D /* HomeView.swift in Sources */,
+				930C865F2A83864700CEAD6B /* StatusListEnum.swift in Sources */,
 				9343A6D02A79A0300021E66D /* MealsResponse.swift in Sources */,
 				9343A6D92A7A3ABB0021E66D /* ListViewModel.swift in Sources */,
 				933A722D2A7A9F56003079DC /* YouTubeView.swift in Sources */,
 				933A723A2A7C2073003079DC /* NetworkFetchingProtocol.swift in Sources */,
 				933A72402A7D1B9D003079DC /* URLSessionExtension.swift in Sources */,
+				930C86612A83869600CEAD6B /* StatusEnum.swift in Sources */,
 				9343A6782A78450C0021E66D /* TheMealPrepAppApp.swift in Sources */,
 				9343A6CC2A794F580021E66D /* RemoteDataSourceImpl.swift in Sources */,
 				9343A6CE2A7958920021E66D /* RepositoryImpl.swift in Sources */,

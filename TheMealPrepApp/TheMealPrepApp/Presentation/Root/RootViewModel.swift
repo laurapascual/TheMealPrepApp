@@ -8,13 +8,6 @@
 import Foundation
 import Combine
 
-enum Status: Equatable {
-    case `default`
-    case loaded
-    case error(error: String)
-}
-
-
 final class RootViewModel: ObservableObject {
     
     let repository: RepositoryProtocol
