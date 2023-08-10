@@ -35,18 +35,18 @@ struct ListCellView: View {
                                 .fontWeight(.bold)
                                 .font(.system(size: 18))
                                 .multilineTextAlignment(.center)
-                                .accessibilityLabel("Recipe name")
+                                .accessibilityLabel("Recipe of \(meal.name)")
                             
                             Text(meal.area)
                                 .fontWeight(.medium)
                                 .font(.system(size: 14))
                                 .frame(maxWidth: .infinity, alignment: .center)
-                                .accessibilityLabel("Recipe area")
+                                .accessibilityLabel("Recipe area: \(meal.area)")
                             
                             Text(meal.tags ?? "No tags")
                                 .font(.system(size: 12))
                                 .frame(maxWidth: .infinity, alignment: .center)
-                                .accessibilityLabel("Recipe tags")
+                                .accessibilityLabel("Recipe tags: \(meal.tags)")
                         })
                 }).padding(EdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 0))
                 
