@@ -60,6 +60,7 @@ struct ListView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Toggle("Dark", isOn: $isDark)
+                        .accentColor(.orange)
                 }
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button {

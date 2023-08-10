@@ -140,6 +140,15 @@
 			path = Presentation;
 			sourceTree = "<group>";
 		};
+		930CD3B12A84DF96001B2999 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9343A6C72A794CF20021E66D /* RemoteDataSourceProtocol.swift */,
+				933A72392A7C2073003079DC /* NetworkFetchingProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		933A722B2A7A9F41003079DC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -305,6 +314,7 @@
 			isa = PBXGroup;
 			children = (
 				9343A6CB2A794F580021E66D /* RemoteDataSourceImpl.swift */,
+				930CD3B12A84DF96001B2999 /* Protocols */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -331,9 +341,7 @@
 		9343A6BD2A7945B40021E66D /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				9343A6C72A794CF20021E66D /* RemoteDataSourceProtocol.swift */,
 				9343A6C92A794CFB0021E66D /* RepositoryProtocol.swift */,
-				933A72392A7C2073003079DC /* NetworkFetchingProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
