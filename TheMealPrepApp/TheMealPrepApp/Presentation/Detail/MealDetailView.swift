@@ -20,7 +20,7 @@ struct MealDetailView: View {
                     .font(.system(size: 20))
                     .lineLimit(nil)
                     .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
-                    .accessibilityLabel("Meal name")
+                    .accessibilityLabel("\(meal.name)")
                 
                 AsyncImage(url: meal.image,
                            content: { image in
@@ -39,7 +39,7 @@ struct MealDetailView: View {
                 Text(meal.instructions)
                     .multilineTextAlignment(.center)
                     .padding(EdgeInsets(top: 0, leading: 20, bottom: 20, trailing: 20))
-                    .accessibilityLabel("Meal instructions")
+                    .accessibilityLabel("\(meal.instructions)")
                 
                 YouTubeView(videoId: meal.videoUrl.components(separatedBy: "=")[1])
                     .accessibilityAddTraits([.startsMediaSession])
