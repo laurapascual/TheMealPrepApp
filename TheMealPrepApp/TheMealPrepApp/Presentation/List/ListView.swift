@@ -11,7 +11,8 @@ struct ListView: View {
     
     @EnvironmentObject var rootViewModel: RootViewModel
     @ObservedObject var listViewModel: ListViewModel
-    @State private var 🔙 = false
+    @AppStorage("isDark") private var isDark = false
+    @State private var buttonAnimation = false
     
     init(listViewModel: ListViewModel) {
         self.listViewModel = listViewModel
@@ -25,9 +26,11 @@ struct ListView: View {
                         area in
                         Text(area.rawValue)
                     }
-                }
+                }.navigationTitle(Text("Meals list"))
+                    .navigationBarTitleDisplayMode(.inline)
                 .accessibilityLabel("Filter by area")
                 .accessibilityHint("Display the picker to choose the recipes by area")
+                
                 switch (listViewModel.statusList) {
                     
                 case StatusList.loading:
@@ -55,18 +58,34 @@ struct ListView: View {
                 }
             }
             .toolbar {
-                Button("🔙") {
-                    rootViewModel.goToHome()
-                }.rotation3DEffect(.degrees(🔙 ? 20 : -20), axis: (x: 20, y: 20, z: 10))
-                .offset(y: 🔙 ? -10 : 0)
-                .onAppear{
-                    withAnimation(.easeInOut(duration: 1).delay(0.5).repeatForever(autoreverses: true)){
-                        🔙.toggle()
-                    }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Toggle("Dark", isOn: $isDark)
                 }
-                .accessibilityAddTraits([.isButton])
-                .accessibilityLabel("Back button")
-                .accessibilityHint("Press to return to HomeView")
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        rootViewModel.goToHome()
+                    } label: {
+                        if isDark {
+                            Image(systemName: "arrowshape.backward")
+                                .resizable()
+                                .foregroundColor(.white)
+                        } else {
+                            Image(systemName: "arrowshape.backward")
+                                .resizable()
+                                .foregroundColor(.black)
+                        }
+                    }.rotation3DEffect(.degrees(buttonAnimation ? 20 : -20), axis: (x: 20, y: 20, z: 10))
+                        .offset(y: buttonAnimation ? -10 : 0)
+                        .onAppear{
+                            withAnimation(.easeInOut(duration: 1).delay(0.5).repeatForever(autoreverses: true)){
+                                buttonAnimation.toggle()
+                            }
+                        }
+                        .accessibilityAddTraits([.isButton])
+                        .accessibilityLabel("Back button")
+                        .accessibilityHint("Press to return to HomeView")
+                }
+                
             }
             
         }.scrollContentBackground(.hidden)

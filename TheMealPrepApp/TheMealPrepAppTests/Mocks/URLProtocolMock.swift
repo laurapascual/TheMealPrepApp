@@ -22,7 +22,7 @@ final class URLProtocolMock: URLProtocol {
     override func stopLoading() {}
     
     override func startLoading() {
-        
+
         guard let handler = URLProtocolMock.requestHandler else {
             fatalError("Hay que inicializar el handler para inyector el url protocol mock")
         }

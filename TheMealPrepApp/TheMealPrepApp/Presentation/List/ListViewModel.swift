@@ -6,10 +6,11 @@
 //
 
 import Foundation
-//import SwiftUI
 
 final class ListViewModel: ObservableObject {
+    
     let repository: RepositoryProtocol
+    
     @Published var filterOption: AreaEnum = .none
     @Published var searchText = ""
     @Published var meals: [Meal] = []

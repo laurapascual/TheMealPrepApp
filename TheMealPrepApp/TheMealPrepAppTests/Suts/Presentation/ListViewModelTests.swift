@@ -59,8 +59,6 @@ final class ListViewModelTests: XCTestCase {
         sut?.filterOption = .none
         sut?.searchText = "name1"
         
-        let expectation = XCTestExpectation(description: "Error")
-        
         XCTAssertNotNil(sut?.searchedMeals.first, "Error: There are no meals with that search")
         XCTAssertEqual(sut?.searchedMeals.first?.name, "name1")
         XCTAssertEqual(sut?.searchedMeals.count, 1, "Error: The number of meals does not match")

@@ -57,5 +57,3 @@ struct MealDetailView_Previews: PreviewProvider {
         MealDetailView(meal: .init(id: "id", image: URL(string: "www.hola.com")!, name: "Hola", instructions: "", area: "", tags: "", videoUrl: ""))
     }
 }
-
-

@@ -10,6 +10,7 @@ import SwiftUI
 struct RootView: View {
     
     @EnvironmentObject var rootViewModel: RootViewModel
+    @AppStorage("isDark") private var isDark = false
     
     var body: some View {
         switch (rootViewModel.status) {
@@ -23,6 +24,7 @@ struct RootView: View {
         case Status.loaded:
             let listViewModel = ListViewModel(repository: rootViewModel.repository)
                 ListView(listViewModel: listViewModel)
+                .preferredColorScheme(isDark ? .dark : .light)
         }
     }
 }
