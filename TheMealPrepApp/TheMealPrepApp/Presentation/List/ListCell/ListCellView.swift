@@ -46,7 +46,7 @@ struct ListCellView: View {
                             Text(meal.tags ?? "No tags")
                                 .font(.system(size: 12))
                                 .frame(maxWidth: .infinity, alignment: .center)
-                                .accessibilityLabel("Recipe tags: \(meal.tags)")
+                                .accessibilityLabel("Recipe tags: \(meal.tags ?? "No tags")")
                         })
                 }).padding(EdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 0))
                 
