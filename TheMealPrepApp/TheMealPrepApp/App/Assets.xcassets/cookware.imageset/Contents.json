@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "utensilios.png",
+      "filename" : "cookware.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "utensilios@2x.png",
+      "filename" : "cookware@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "utensilios@3x.png",
+      "filename" : "cookware@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

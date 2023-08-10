@@ -75,7 +75,7 @@ struct ListView: View {
                                 .resizable()
                                 .foregroundColor(.black)
                         }
-                    }.rotation3DEffect(.degrees(buttonAnimation ? 20 : -20), axis: (x: 20, y: 20, z: 10))
+                    }.rotation3DEffect(.degrees(buttonAnimation ? 10 : -10), axis: (x: 20, y: 20, z: 10))
                         .offset(y: buttonAnimation ? -10 : 0)
                         .onAppear{
                             withAnimation(.easeInOut(duration: 1).delay(0.5).repeatForever(autoreverses: true)){

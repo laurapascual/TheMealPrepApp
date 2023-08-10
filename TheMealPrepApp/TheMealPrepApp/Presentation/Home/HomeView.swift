@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject var rootViewModel: RootViewModel
-    @State private var utensilios = false
+    @State private var cookware = false
     
     var body: some View {
         ZStack{
@@ -24,14 +24,14 @@ struct HomeView: View {
                         .foregroundStyle(.black)
                         .frame(width: 150, height: 50)
                     
-                    Image("utensilios")
+                    Image("cookware")
                         .resizable()
                         .frame(width: 30, height: 50)
-                        .rotation3DEffect(.degrees(utensilios ? 0 : -10), axis: (x: 0, y: 0, z: 10))
-                        .offset(y: utensilios ? -10 : 0)
+                        .rotation3DEffect(.degrees(cookware ? 0 : -10), axis: (x: 0, y: 0, z: 10))
+                        .offset(y: cookware ? -10 : 0)
                         .onAppear{
                             withAnimation(.easeInOut(duration: 1).delay(0.5).repeatForever(autoreverses: true)){
-                                utensilios.toggle()
+                                cookware.toggle()
                             }
                         }.padding()
             }.accessibilityAddTraits([.isButton])
